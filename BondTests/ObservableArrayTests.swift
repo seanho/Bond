@@ -24,7 +24,7 @@ class ObservableArrayTests: XCTestCase {
     XCTAssert(array.count == 2)
     XCTAssert(array.array == [1, 2])
     
-    array.insert(3, atIndex: 0)
+    array.insert(3, at: 0)
     XCTAssert(array.count == 3)
     XCTAssert(array.array == [3, 1, 2])
     
@@ -37,7 +37,7 @@ class ObservableArrayTests: XCTestCase {
     XCTAssert(array.array == [3, 1, 2, 4])
     XCTAssert(last == 5)
     
-    let element = array.removeAtIndex(1)
+    let element = array.remove(at: 1)
     XCTAssert(array.count == 3)
     XCTAssert(array.array == [3, 2, 4])
     XCTAssert(element == 1)
@@ -68,28 +68,28 @@ class ObservableArrayTests: XCTestCase {
     array.append(4) // 1, 2, 3, 4
     XCTAssert(filtered.array == [2, 4])
     
-    array.insert(6, atIndex: 0) // 6, 1, 2, 3, 4
+    array.insert(6, at: 0) // 6, 1, 2, 3, 4
     XCTAssert(filtered.array == [6, 2, 4])
     
-    array.insert(8, atIndex: 2) // 6, 1, 8, 2, 3, 4
+    array.insert(8, at: 2) // 6, 1, 8, 2, 3, 4
     XCTAssert(filtered.array == [6, 8, 2, 4])
     
     array.removeLast() // 6, 1, 8, 2, 3
     XCTAssert(filtered.array == [6, 8, 2])
     
-    array.removeAtIndex(1) // 6, 8, 2, 3
+    array.remove(at: 1) // 6, 8, 2, 3
     XCTAssert(filtered.array == [6, 8, 2])
     
-    array.removeAtIndex(0) // 8, 2, 3
+    array.remove(at: 0) // 8, 2, 3
     XCTAssert(filtered.array == [8, 2])
     
-    array.removeRange(1...2) // 8
+    array.removeSubrange(1..<3) // 8
     XCTAssert(filtered.array == [8])
     
     array.insertContentsOf([3, 4, 5], atIndex: 0) // 3, 4, 5, 8
     XCTAssert(filtered.array == [4, 8])
     
-    array.insert(6, atIndex: 2) // 3, 4, 6, 5, 8
+    array.insert(6, at: 2) // 3, 4, 6, 5, 8
     XCTAssert(filtered.array == [4, 6, 8])
     
     array[0] = 1 // 1, 4, 6, 5, 8
@@ -98,19 +98,19 @@ class ObservableArrayTests: XCTestCase {
     array[0] = 2 // 2, 4, 6, 5, 8
     XCTAssert(filtered.array == [2, 4, 6, 8])
     
-    array.insert(6, atIndex: 0) // 6, 2, 4, 6, 5, 8
+    array.insert(6, at: 0) // 6, 2, 4, 6, 5, 8
     XCTAssert(filtered.array == [6, 2, 4, 6, 8])
     
     array[1] = 1 // 6, 1, 4, 6, 5, 8
     XCTAssert(filtered.array == [6, 4, 6, 8])
     
-    array.removeAtIndex(2) // 6, 1, 6, 5, 8
+    array.remove(at: 2) // 6, 1, 6, 5, 8
     XCTAssert(filtered.array == [6, 6, 8])
     
     array[3] = 4 // 6, 1, 6, 4, 8
     XCTAssert(filtered.array == [6, 6, 4, 8])
     
-    array.removeRange(1..<array.count) // 6
+    array.removeSubrange(1..<array.count) // 6
     XCTAssert(filtered.array == [6])
     
     array.append(1) // 6, 1
@@ -142,7 +142,7 @@ class ObservableArrayTests: XCTestCase {
     array.append(1)
     XCTAssert(mapped.array == [2])
     
-    array.insert(2, atIndex: 0)
+    array.insert(2, at: 0)
     XCTAssert(mapped.array == [4, 2])
     
     array.insertContentsOf([3, 4], atIndex: 1)
@@ -151,13 +151,13 @@ class ObservableArrayTests: XCTestCase {
     array.removeLast()
     XCTAssert(mapped.array == [4, 6, 8])
     
-    array.removeAtIndex(1)
+    array.remove(at: 1)
     XCTAssert(mapped.array == [4, 8])
     
     array.performBatchUpdates { array in
       array.removeAll()
       array.append(2)
-      array.insert(1, atIndex: 0)
+      array.insert(1, at: 0)
       array[1] = 4
     }
     XCTAssert(mapped.array == [2, 8])
@@ -183,10 +183,10 @@ class ObservableArrayTests: XCTestCase {
     array.append(1)
     XCTAssert(callCount == 1)
     
-    array.insert(2, atIndex: 0)
+    array.insert(2, at: 0)
     XCTAssert(callCount == 2)
     
-    array.removeAtIndex(0)
+    array.remove(at: 0)
     XCTAssert(callCount == 2)
     
     array.removeLast()
@@ -195,10 +195,10 @@ class ObservableArrayTests: XCTestCase {
     array.insertContentsOf([1, 2, 3, 4], atIndex: 0)
     XCTAssert(callCount == 6)
 
-    array.removeAtIndex(1)
+    array.remove(at: 1)
     XCTAssert(callCount == 6)
     
-    array.insert(2, atIndex: 1)
+    array.insert(2, at: 1)
     XCTAssert(callCount == 7)
     
     mapped.observe { arrayEvent in
@@ -236,7 +236,7 @@ class ObservableArrayTests: XCTestCase {
     XCTAssert(mapped[0].value == 1)
     XCTAssert(callCount == 1)
     
-    array.insert(2, atIndex: 0)
+    array.insert(2, at: 0)
     XCTAssert(callCount == 2)
     
     XCTAssert(mapped[1].value == 1)
@@ -245,7 +245,7 @@ class ObservableArrayTests: XCTestCase {
     XCTAssert(mapped[0].value == 2)
     XCTAssert(callCount == 2)
     
-    array.removeAtIndex(0)
+    array.remove(at: 0)
     XCTAssert(callCount == 2)
     
     XCTAssert(mapped[0].value == 1)
@@ -268,7 +268,7 @@ class ObservableArrayTests: XCTestCase {
     array.append(1) // 1
     XCTAssert(mapped.array == [])
     
-    array.insert(3, atIndex: 0) // 3, 1
+    array.insert(3, at: 0) // 3, 1
     XCTAssert(mapped.array == [6])
     
     array.insertContentsOf([1, 4], atIndex: 1) // 3, 1, 4, 1
@@ -277,7 +277,7 @@ class ObservableArrayTests: XCTestCase {
     array.removeLast() // 3, 1, 4
     XCTAssert(mapped.array == [6, 8])
     
-    array.removeAtIndex(2) // 3, 1
+    array.remove(at: 2) // 3, 1
     XCTAssert(mapped.array == [6])
     
     array.performBatchUpdates { array in
@@ -329,7 +329,7 @@ class ObservableArrayTests: XCTestCase {
   
   func testFilteredObservableArrayAlwaysReplayes() {
     let array = ObservableArray<Int>([1, 2, 3])
-    array.insert(7, atIndex: 0) // 7, 1, 2, 3
+    array.insert(7, at: 0) // 7, 1, 2, 3
     XCTAssert(array.count == 4)
     
     let filtered = array.filter { e in e % 2 == 0 }.crystallize()

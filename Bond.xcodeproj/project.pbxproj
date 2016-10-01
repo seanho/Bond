@@ -46,8 +46,6 @@
 		69491BBA1A7C217100A13B6B /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69491BAE1A7C217100A13B6B /* Bond.framework */; };
 		790FD79C1B7F1C3800136394 /* NSTableView+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FD79B1B7F1C3800136394 /* NSTableView+Bond.swift */; };
 		790FD79E1B7F1CF500136394 /* NSTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FD79D1B7F1CF500136394 /* NSTableViewTests.swift */; };
-		795D4C191B8F05C9001B80B0 /* NSIndexSet+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D4C181B8F05C9001B80B0 /* NSIndexSet+Bond.swift */; };
-		795D4C1A1B8F05C9001B80B0 /* NSIndexSet+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D4C181B8F05C9001B80B0 /* NSIndexSet+Bond.swift */; };
 		900BFC081ADFC5DC002B4B6E /* CALayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BFC061ADFC5D5002B4B6E /* CALayerTests.swift */; };
 		900BFC0B1ADFC863002B4B6E /* NSButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BFC091ADFC860002B4B6E /* NSButtonTests.swift */; };
 		900BFC0E1ADFC9E9002B4B6E /* NSColorWellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BFC0C1ADFC9A5002B4B6E /* NSColorWellTests.swift */; };
@@ -74,7 +72,6 @@
 		B5616D981BD8A2C00016CCB4 /* NSObject+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD68E91B77BB1D00837A36 /* NSObject+Bond.swift */; };
 		B5616D991BD8A2DF0016CCB4 /* NSLock+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD68E71B77BB1D00837A36 /* NSLock+Bond.swift */; };
 		B5616D9A1BD8A3110016CCB4 /* NSNotificationCenter+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD68E81B77BB1D00837A36 /* NSNotificationCenter+Bond.swift */; };
-		B5616D9B1BD8A3290016CCB4 /* NSIndexSet+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D4C181B8F05C9001B80B0 /* NSIndexSet+Bond.swift */; };
 		B5616DBE1BD8A39E0016CCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5616DBD1BD8A39E0016CCB4 /* AppDelegate.swift */; };
 		B5616DC01BD8A39E0016CCB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5616DBF1BD8A39E0016CCB4 /* ViewController.swift */; };
 		B5616DC31BD8A39E0016CCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5616DC11BD8A39E0016CCB4 /* Main.storyboard */; };
@@ -235,7 +232,6 @@
 		69491BBF1A7C217100A13B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		790FD79B1B7F1C3800136394 /* NSTableView+Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTableView+Bond.swift"; sourceTree = "<group>"; };
 		790FD79D1B7F1CF500136394 /* NSTableViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTableViewTests.swift; sourceTree = "<group>"; };
-		795D4C181B8F05C9001B80B0 /* NSIndexSet+Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexSet+Bond.swift"; sourceTree = "<group>"; };
 		900BFC061ADFC5D5002B4B6E /* CALayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerTests.swift; sourceTree = "<group>"; };
 		900BFC091ADFC860002B4B6E /* NSButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSButtonTests.swift; sourceTree = "<group>"; };
 		900BFC0C1ADFC9A5002B4B6E /* NSColorWellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorWellTests.swift; sourceTree = "<group>"; };
@@ -615,7 +611,6 @@
 			isa = PBXGroup;
 			children = (
 				ECAD68E51B77BB1D00837A36 /* CALayer+Bond.swift */,
-				795D4C181B8F05C9001B80B0 /* NSIndexSet+Bond.swift */,
 				ECAD68E61B77BB1D00837A36 /* NSLayoutConstraint+Bond.swift */,
 				ECAD68E71B77BB1D00837A36 /* NSLock+Bond.swift */,
 				ECAD68E81B77BB1D00837A36 /* NSNotificationCenter+Bond.swift */,
@@ -824,7 +819,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Bond;
 				TargetAttributes = {
 					03ACB4FD1AB555D6001B3E64 = {
@@ -973,7 +968,6 @@
 				EC0075D41B90E5F400249C31 /* UIControl+Bond.swift in Sources */,
 				EC0075D51B90E5F400249C31 /* UIDatePicker+Bond.swift in Sources */,
 				EC0075D81B90E5F400249C31 /* UINavigationItem+Bond.swift in Sources */,
-				795D4C191B8F05C9001B80B0 /* NSIndexSet+Bond.swift in Sources */,
 				ECAD68F11B77BB1D00837A36 /* Disposable.swift in Sources */,
 				ECAD68ED1B77BB1D00837A36 /* Buffer.swift in Sources */,
 				ECAD690B1B77BB1D00837A36 /* ObservableArrayEvent.swift in Sources */,
@@ -1041,7 +1035,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5616D9B1BD8A3290016CCB4 /* NSIndexSet+Bond.swift in Sources */,
 				1607CA111BEF407F001B2E35 /* UINavigationItem+Bond.swift in Sources */,
 				1607CA0E1BEF407F001B2E35 /* UIImageView+Bond.swift in Sources */,
 				1607CA0B1BEF407F001B2E35 /* UICollectionView+Bond.swift in Sources */,
@@ -1115,7 +1108,6 @@
 				ECAD690A1B77BB1D00837A36 /* ObservableArray.swift in Sources */,
 				52CC7A1E1BC4C71F0010D41E /* NSAppearanceCustomization+Bond.swift in Sources */,
 				ECAD68F41B77BB1D00837A36 /* DisposableType.swift in Sources */,
-				795D4C1A1B8F05C9001B80B0 /* NSIndexSet+Bond.swift in Sources */,
 				ECAD69301B77BB1D00837A36 /* NSColorWell+Bond.swift in Sources */,
 				ECAD69401B77BB1D00837A36 /* NSLayoutConstraint+Bond.swift in Sources */,
 				ECAD693A1B77BB1D00837A36 /* NSTextField+Bond.swift in Sources */,
@@ -1212,7 +1204,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1224,7 +1216,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1241,8 +1233,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1252,6 +1246,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1289,8 +1284,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1299,6 +1296,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1309,6 +1307,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1319,6 +1318,7 @@
 		69491BC51A7C217100A13B6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1329,13 +1329,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		69491BC61A7C217100A13B6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1346,7 +1347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1365,7 +1366,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSAppForTesting.app/iOSAppForTesting";
 			};
 			name = Debug;
@@ -1381,7 +1382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSAppForTesting.app/iOSAppForTesting";
 			};
 			name = Release;
@@ -1398,6 +1399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bond.tvOSAppForTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1416,6 +1418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bond.tvOSAppForTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1424,6 +1427,7 @@
 		B56989C71BD8A00C00927A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1438,6 +1442,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1446,6 +1451,7 @@
 		B56989C81BD8A00C00927A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1461,6 +1467,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1484,6 +1491,7 @@
 				PRODUCT_NAME = Bond;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1507,14 +1515,15 @@
 				PRODUCT_NAME = Bond;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		DCA979801A83C3A200DD4A30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -1525,16 +1534,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DCA979811A83C3A200DD4A30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -1545,6 +1555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "bond.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

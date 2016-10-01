@@ -44,7 +44,7 @@ class ObservableTests: XCTestCase {
   
   func testObservingAndDisposingObserver() {
     var observedValue = -1
-    var capturedSink: (Int -> Void)!
+    var capturedSink: ((Int) -> Void)!
     
     let eventProducer = EventProducer<Int> { sink in
       capturedSink = sink
@@ -72,7 +72,7 @@ class ObservableTests: XCTestCase {
     var capturedSink: EventProducer<Int>.Sink!
     let cascadingDisposable = SimpleDisposable()
     
-    let producer = { (sink: Observable<Int>.Sink) -> DisposableType? in
+    let producer = { (sink: @escaping Observable<Int>.Sink) -> DisposableType? in
       capturedSink = sink
       return cascadingDisposable
     }
@@ -102,7 +102,7 @@ class ObservableTests: XCTestCase {
     var capturedSink: EventProducer<Int>.Sink!
     let cascadingDisposable = SimpleDisposable()
     
-    let producer = { (sink: EventProducer<Int>.Sink) -> DisposableType? in
+    let producer = { (sink: @escaping EventProducer<Int>.Sink) -> DisposableType? in
       capturedSink = sink
       return cascadingDisposable
     }
@@ -133,7 +133,7 @@ class ObservableTests: XCTestCase {
     var capturedSink: EventProducer<Int>.Sink!
     let cascadingDisposable = SimpleDisposable()
     
-    let producer = { (sink: EventProducer<Int>.Sink) -> DisposableType? in
+    let producer = { (sink: @escaping EventProducer<Int>.Sink) -> DisposableType? in
       capturedSink = sink
       return cascadingDisposable
     }
@@ -151,8 +151,8 @@ class ObservableTests: XCTestCase {
   }
   
   func testNormalLifecycleDoesNotCauseSinkToRetainObservableWhenThereIsAnObserver() {
-    var capturedSink: (Int -> Void)!
-    var eventProducer: EventProducer<Int>! = EventProducer(lifecycle: .Normal) { sink in
+    var capturedSink: ((Int) -> Void)!
+    var eventProducer: EventProducer<Int>! = EventProducer(lifecycle: .normal) { sink in
       capturedSink = sink
       return nil
     }
