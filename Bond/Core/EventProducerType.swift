@@ -34,6 +34,7 @@ public protocol EventProducerType {
   var replayLength: Int { get }
   
   /// Registers the given observer and returns a disposable that can cancel observing.
+  @discardableResult
   func observe(_ observer: @escaping (EventType) -> Void) -> DisposableType
 }
 
@@ -41,6 +42,7 @@ public extension EventProducerType {
   
   /// Registers the observer that will receive only events generated after registering.
   /// A better performing version of observable.skip(observable.replyLength).observe().
+  @discardableResult
   public func observeNew(_ observer: @escaping (EventType) -> Void) -> DisposableType {
     var skip: Int = replayLength
     return observe { value in
@@ -54,6 +56,7 @@ public extension EventProducerType {
   
   /// Establishes a one-way binding between the source and the bindable's sink
   /// and returns a disposable that can cancel observing.
+  @discardableResult
   public func bindTo<B: BindableType>(_ bindable: B) -> DisposableType where B.Element == EventType {
     let disposable = SerialDisposable(otherDisposable: nil)
     let sink = bindable.sink(disposable)
@@ -65,6 +68,7 @@ public extension EventProducerType {
   
   /// Establishes a one-way binding between the source and the bindable's sink
   /// and returns a disposable that can cancel observing.
+  @discardableResult
   public func bindTo<B: BindableType>(_ bindable: B) -> DisposableType where B.Element == Optional<EventType> {
     let disposable = SerialDisposable(otherDisposable: nil)
     let sink = bindable.sink(disposable)
@@ -215,6 +219,7 @@ public extension EventProducerType where Self: BindableType {
   
   /// Establishes a one-way binding between the source and the bindable's sink
   /// and returns a disposable that can cancel observing.
+  @discardableResult
   public func bidirectionalBindTo<B: BindableType>(_ bindable: B) -> DisposableType where B: EventProducerType, B.EventType == Element, B.Element == EventType {
     let d1 = bindTo(bindable)
     let d2 = bindable.bindTo(self)
