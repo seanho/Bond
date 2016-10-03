@@ -168,7 +168,8 @@ public extension EventProducerType where
   EventType.ObservableArrayEventSequenceType.Iterator.Element.EventType: ObservableArrayEventType {
   
   fileprivate typealias ElementType = EventType.ObservableArrayEventSequenceType.Iterator.Element.EventType.ObservableArrayEventSequenceType.Iterator.Element
-  
+
+  @discardableResult
   public func bindTo(_ collectionView: UICollectionView, proxyDataSource: BNDCollectionViewProxyDataSource? = nil, createCell: @escaping (IndexPath, ObservableArray<ObservableArray<ElementType>>, UICollectionView) -> UICollectionViewCell) -> DisposableType {
     
     let array: ObservableArray<ObservableArray<ElementType>>

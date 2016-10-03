@@ -118,6 +118,7 @@ public extension EventProducerType where EventType: ObservableArrayEventType {
 
   private typealias ElementType = EventType.ObservableArrayEventSequenceType.Generator.Element
 
+  @discardableResult
   public func bindTo<DelegateType: BNDTableViewDelegate where DelegateType.Element == ElementType>(tableView: NSTableView, delegate: DelegateType) -> DisposableType {
 
     let array: ObservableArray<ElementType>
